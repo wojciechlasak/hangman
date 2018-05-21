@@ -137,10 +137,7 @@ class Mid extends React.Component{
 
 
 class Letters extends React.Component {
-	constructor(props) {
-		super(props)
-	}
-
+	
 	onChangedImage = () => {this.props.onChangedImage()}
 
 	onChangedText= (props => {this.props.onChangedText(this.props.id)});
@@ -148,7 +145,7 @@ class Letters extends React.Component {
 	createTable = () => {
 			let table = [];
 			for (let i = 0; i <26; i++) 
-				table.push(<Letter ket={i} id={i} pass={this.props.pass} onChangedText={this.props.onChangedText} onChangedImage={this.props.onChangedImage}/>);
+				table.push(<Letter key={i} id={i} pass={this.props.pass} onChangedText={this.props.onChangedText} onChangedImage={this.props.onChangedImage}/>);
 				
 			return table
 	  }
